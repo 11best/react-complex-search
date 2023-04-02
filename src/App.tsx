@@ -5,10 +5,8 @@ import SearchInput from "./component/SearchInput";
 
 function App() {
   return (
-    <div className="flex justify-center w-full h-full">
-      <div className="mt-16">
-        <SearchInput />
-      </div>
+    <div className="mt-16 mx-auto w-full max-w-screen-md">
+      <SearchInput />
     </div>
   );
 }
