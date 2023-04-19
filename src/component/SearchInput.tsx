@@ -26,6 +26,11 @@ const reducer = (state: State, action: Action) => {
   }
 };
 
+const statusOptions = ["Approved", "Declined", "In progress"];
+// search string
+// create date
+// expired date
+
 const SearchInput = () => {
   const handleSubmit = () => {
     console.log("submit");
@@ -45,12 +50,13 @@ const SearchInput = () => {
           type="submit"
           value="Submit"
           className={clsx(
-            "p-2 ml-2 text-sm rounded-md transition-all duration-300",
+            "p-2 ml-2 rounded-md transition-all duration-300",
             "cursor-pointer border-1 text-white",
             "bg-teal-500 hover:bg-teal-700"
           )}
         />
       </form>
+
       <div className="w-3/5 bg-teal-100 rounded-md mt-4">
         {/* <FilterOption /> */}
         <div className="p-2 grid grid-cols-4">
@@ -65,9 +71,9 @@ const SearchInput = () => {
               "rounded-md cursor-pointer col-span-3"
             )}
           >
-            <option value="">Pending</option>
-            <option value="">Approved</option>
-            <option value="">Declined</option>
+            {statusOptions.map((option) => (
+              <option value={option}>{option}</option>
+            ))}
           </select>
         </div>
       </div>

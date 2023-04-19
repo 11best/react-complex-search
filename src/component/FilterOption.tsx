@@ -1,4 +1,4 @@
-const FilterOption = () => {
+const FilterOption = (props: { label: string; options: string[] }) => {
   return (
     <div>
       <div>Filter</div>
