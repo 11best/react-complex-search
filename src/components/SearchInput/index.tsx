@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import FilterOption from "./FilterOption";
+// import FilterOption from "./FilterOption/FilterOption";
 
 type State = {
   searchObj: any;
