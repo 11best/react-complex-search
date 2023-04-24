@@ -1,10 +1,20 @@
-// import SearchInput from "./component/SearchInput";
-
-// receive filter CaseStatus
-// case-caseStatus-$eq=completed
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layout from "./Layout";
+import MacSearch from "./pages/macSearch";
 
 function App() {
-  return <div className="mt-16 mx-auto w-full max-w-screen-md">app</div>;
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <MacSearch />,
+    },
+  ]);
+
+  return (
+    <Layout>
+      <RouterProvider router={router} />
+    </Layout>
+  );
 }
 
 export default App;
