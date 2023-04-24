@@ -1,1 +1,1 @@
-# react-complex-search
+# react-component
