@@ -1,12 +1,17 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Layout";
-import MacSearch from "./pages/macSearch";
+import Home from "./pages/Home";
+import DateDurationPicker from "./pages/dateDurationPicker";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <MacSearch />,
+      element: <Home />,
+    },
+    {
+      path: "/date-picker",
+      element: <DateDurationPicker />,
     },
   ]);
 
