@@ -21,24 +21,20 @@ const Header = () => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <header className="h-12 bg-red-300">
-      <div className="hidden sm:flex justify-between items-center">
-        <div className=" bg-yellow-200 w-20 h-12 flex items-center justify-center">
-          Title
-        </div>
-        <div>
-          {headerItems.map((item) => (
-            <a
-              key={item.name}
-              href={item.url}
-              className="font-semibold hover:text-amber-500 mx-4"
-            >
-              {item.name}
-            </a>
-          ))}
-        </div>
+    <header className="h-16 flex items-center">
+      <div>
+        {headerItems.map((item) => (
+          <a
+            key={item.name}
+            href={item.url}
+            className={clsx("hover:text-amber-400 mr-4 duration-500")}
+          >
+            {item.name}
+          </a>
+        ))}
       </div>
 
+      {/* hamburger button when mobile */}
       <div className="sm:hidden absolute right-0">
         <button
           onClick={() => setExpanded(!expanded)}
