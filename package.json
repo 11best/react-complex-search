@@ -11,6 +11,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@tanstack/react-query": "^4.35.3",
     "clsx": "^1.2.1",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
