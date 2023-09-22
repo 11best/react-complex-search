@@ -21,7 +21,7 @@ jobs:
           run: npm ci
 
         - name: Build web
-          run: npm ci
+          run: npm run build
 
         - name: Install surge
           run: npm install -g surge
