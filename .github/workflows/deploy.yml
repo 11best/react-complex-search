@@ -1,9 +1,7 @@
 name: Deploy to surge
 
-# on: [push]
-
 on:
-    [workflow_dispatch, push]
+    [workflow_dispatch]
 
 jobs:
   build:
