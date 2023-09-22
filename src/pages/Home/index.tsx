@@ -15,7 +15,6 @@ const Home = () => {
 
   return (
     <div>
-      <div>Home ja</div>
       <img src={catQuery.data} />
     </div>
   );
