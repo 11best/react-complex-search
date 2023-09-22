@@ -1,4 +1,5 @@
 # react-component
+node version `^20.5.1`
 
 ```
 npm i
