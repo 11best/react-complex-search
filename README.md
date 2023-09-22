@@ -8,4 +8,5 @@ npm i
 npm run dev
 ```
 
-demo url : papuan-demo.surge.sh
+ [Link for demo](papuan-demo.surge.sh)
+
