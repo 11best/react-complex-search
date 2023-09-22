@@ -3,7 +3,7 @@ name: Deploy to surge
 # on: [push]
 
 on:
-    workflow_dispatch:
+    [workflow_dispatch, push]
 
 jobs:
   build:
@@ -19,18 +19,14 @@ jobs:
 
         - name: Install dependencies
           run: npm ci
+
+        - name: Build web
+          run: npm ci
+
+        - name: Install surge
+          run: npm install -g surge
         
-        
-        # - name: Build web
-        #   run: 
-  
-        # - name: Deploying to surge
-        #     steps:
-        #     - uses: actions/checkout@v3
-        #     - uses: actions/setup-node@v3
-        #         with:
-        #         node-version: 16
-        #     - run: npm install -g surge
-        #     - run: surge ./ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
+        - name: Deploy to surge
+          run: surge ./dist ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
 
     
