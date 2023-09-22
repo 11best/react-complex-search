@@ -3,8 +3,7 @@ name: Deploy to surge
 # on: [push]
 
 on:
-    push
-    # workflow_dispatch:
+    workflow_dispatch:
 
 jobs:
   build:
