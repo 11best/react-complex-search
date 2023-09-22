@@ -13,11 +13,8 @@ const Home = () => {
     return <div>error!</div>;
   }
 
-  console.log("log", catQuery.data);
-
   return (
     <div>
-      <div>Home ja</div>
       <img src={catQuery.data} />
     </div>
   );
