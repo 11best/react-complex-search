@@ -1,64 +1,26 @@
 import clsx from "clsx";
 import { useState } from "react";
 
-type HeaderItem = {
-  name: string;
-  url: string;
-};
-
-const headerItems: HeaderItem[] = [
-  {
-    name: "page 1",
-    url: "",
-  },
-  {
-    name: "page 2",
-    url: "",
-  },
-];
-
 const Header = () => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <header className="h-16 flex items-center">
-      <div>
-        {headerItems.map((item) => (
-          <a
-            key={item.name}
-            href={item.url}
-            className={clsx("hover:text-amber-400 mr-4 duration-500")}
-          >
-            {item.name}
-          </a>
-        ))}
-      </div>
-
-      {/* hamburger button when mobile */}
-      <div className="sm:hidden absolute right-0">
-        <button
-          onClick={() => setExpanded(!expanded)}
-          className="bg-amber-200 p-2 m-1 hover:bg-amber-300 rounded"
-        >
-          ham
-        </button>
+    <header className="h-16 flex items-center justify-end">
+      <div className="flex gap-4">
         <div
+          title="nothing here just mockup"
           className={clsx(
-            expanded ? "absolute right-0 bg-amber-200 w-64" : "hidden"
+            "w-8 h-8 bg-slate-300 hover:bg-orange-400 rounded-full",
+            "cursor-pointer duration-300"
           )}
-        >
-          <div className="flex flex-col">
-            {headerItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.url}
-                className="font-semibold hover:text-amber-500 my-2 ml-8 w-fit"
-              >
-                {item.name}
-              </a>
-            ))}
-          </div>
-        </div>
+        ></div>
+        <div
+          title="nothing here just mockup"
+          className={clsx(
+            "w-8 h-8 bg-slate-300 hover:bg-orange-400 rounded-full",
+            "cursor-pointer duration-300"
+          )}
+        ></div>
       </div>
     </header>
   );

@@ -4,9 +4,9 @@ import Sidebar from "./components/Sidebar";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="max-w-4xl mx-auto flex">
+    <div className="max-w-4xl mx-auto grid grid-cols-7">
       <Sidebar></Sidebar>
-      <div className="px-4">
+      <div className="px-4 col-span-5">
         <Header></Header>
         <main>{children}</main>
       </div>

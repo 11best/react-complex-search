@@ -3,21 +3,18 @@ import logo from "../../assets/logo/papuan_logo.png";
 
 const Sidebar = () => {
   return (
-    <div className="w-60 px-4">
-      <div className="border-b border-slate-200">
-        <a href="/" className="flex w-fit">
-          <img src={logo} alt="papuan_logo" className="w-8 h-fit mx-2 my-4" />
-          <p className="text-orange-300 font-bold text-lg h-16 flex items-center">
+    <aside id="sidebar" className="px-4 col-span-2">
+      <div className="border-b border-slate-200 py-4">
+        <a href="/" className="flex w-fit h-8">
+          <img src={logo} alt="papuan_logo" className="w-8 h-fit mx-2" />
+          <p className="text-orange-400 font-bold text-lg flex items-center">
             Papuan
           </p>
         </a>
       </div>
 
-      <div>sidebar</div>
-      <div>sidebar</div>
-      <div>sidebar</div>
-      <div>sidebar</div>
-    </div>
+      <section>sidebar</section>
+    </aside>
   );
 };
 
