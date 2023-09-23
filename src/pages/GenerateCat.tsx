@@ -1,6 +1,6 @@
-import useCatQuery from "../../queries/useCatQuery";
+import useCatQuery from "../queries/useCatQuery";
 
-const Home = () => {
+const GenerateCat = () => {
   const catQuery = useCatQuery();
 
   if (!catQuery) return null;
@@ -15,10 +15,9 @@ const Home = () => {
 
   return (
     <div>
-      {/* <img src={catQuery.data} /> */}
-      HOME
+      <img src={catQuery.data} />
     </div>
   );
 };
 
-export default Home;
+export default GenerateCat;

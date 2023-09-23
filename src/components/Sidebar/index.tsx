@@ -12,8 +12,15 @@ const Sidebar = () => {
           </p>
         </a>
       </div>
-      <div className="p-4 text-sm">
-        <section>Generate Cat</section>
+      <div className="p-2 text-sm">
+        <section>
+          <a
+            href="/generate-cat"
+            className="w-full p-2 font-bold hover:bg-slate-100 rounded-md block"
+          >
+            Generate Cat
+          </a>
+        </section>
       </div>
     </aside>
   );
