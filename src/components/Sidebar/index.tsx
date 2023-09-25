@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import logo from "../../assets/logo/papuan_logo.png";
+import Collapse from "../Collapse";
 
 const Sidebar = () => {
   return (
@@ -12,15 +13,8 @@ const Sidebar = () => {
           </p>
         </a>
       </div>
-      <div className="p-2 text-sm">
-        <section>
-          <a
-            href="/generate-cat"
-            className="w-full p-2 font-bold hover:bg-slate-100 rounded-md block"
-          >
-            Generate Cat
-          </a>
-        </section>
+      <div className="px-2 py-4 text-sm">
+        <Collapse />
       </div>
     </aside>
   );
