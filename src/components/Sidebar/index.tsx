@@ -14,6 +14,9 @@ const Sidebar = () => {
       </div>
       <div className="p-4 text-sm">
         <section>Generate Cat</section>
+        <section>
+          <a href="/idle-detection">Idle Detection</a>
+        </section>
       </div>
     </aside>
   );
