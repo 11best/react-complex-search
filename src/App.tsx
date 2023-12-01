@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Layout";
 import Home from "./pages/Home";
 import DateDurationPicker from "./pages/dateDurationPicker";
-import GenerateCat from "./pages/GenerateCat";
+import RandomCat from "./pages/RandomCat";
 
 function App() {
   const router = createBrowserRouter([
@@ -11,8 +11,14 @@ function App() {
       element: <Home />,
     },
     {
-      path: "/generate-cat",
-      element: <GenerateCat />,
+      path: "generate-cat",
+      children: [
+        { index: true, element: <RandomCat /> },
+        {
+          path: "random-cat",
+          element: <RandomCat />,
+        },
+      ],
     },
     {
       path: "/date-picker",

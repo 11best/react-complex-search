@@ -1,12 +1,12 @@
 import useCatQuery from "../queries/useCatQuery";
 
-const GenerateCat = () => {
+const RandomCat = () => {
   const catQuery = useCatQuery();
 
   if (!catQuery) return null;
 
   if (catQuery.isLoading) {
-    return <div>Loading...</div>;
+    return <div>random but Loading...</div>;
   }
 
   if (catQuery.error) {
@@ -20,4 +20,4 @@ const GenerateCat = () => {
   );
 };
 
-export default GenerateCat;
+export default RandomCat;
