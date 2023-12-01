@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import logo from "../../assets/logo/papuan_logo.png";
-import Collapse from "../Collapse";
+import { ReactNode } from "react";
 
-const Sidebar = () => {
+const Sidebar = (props: {children: ReactNode}) => {
   return (
     <aside id="sidebar" className="px-4 col-span-2">
       <div className="border-b border-slate-200 py-4">
@@ -14,7 +14,7 @@ const Sidebar = () => {
         </a>
       </div>
       <div className="px-2 py-4 text-sm">
-        <Collapse />
+        {props.children}
       </div>
     </aside>
   );
