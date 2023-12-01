@@ -1,12 +1,12 @@
-import useCatQuery from "../../queries/useCatQuery";
+import useCatQuery from "../queries/useCatQuery";
 
-const Home = () => {
+const RandomCat = () => {
   const catQuery = useCatQuery();
 
   if (!catQuery) return null;
 
   if (catQuery.isLoading) {
-    return <div>Loading...</div>;
+    return <div>random but Loading...</div>;
   }
 
   if (catQuery.error) {
@@ -15,10 +15,9 @@ const Home = () => {
 
   return (
     <div>
-      {/* <img src={catQuery.data} /> */}
-      HOME
+      <img src={catQuery.data} />
     </div>
   );
 };
 
-export default Home;
+export default RandomCat;
